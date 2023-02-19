@@ -1,0 +1,273 @@
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>Module 4 - Labo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <script src="scripts.js" type="text/javascript"></script>
+</head>
+
+
+<body>
+    <div class="text-center">
+        <img src="images/logo.png" class="img-fluid" alt="" >    
+    </div>
+
+    <!-- Medium size container, padding 3, margins 3, background dark, text is white -->
+    <!-- Should show the name of your company with an image or logo -->
+    <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
+    <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
+    <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
+
+    <div class="container-md p-3 my-3 border bg-dark text-white">
+        <h1>Welcome to Craig's Barbershop at uOttawa</h1>
+        <p>Voted #1 barbershop in the universe by our humble owner Craig!</p>
+        
+    </div>
+
+    <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
+    <!-- It can be useful for placement of information -->
+    <div class="text-center">
+        <div class="container-md p-3 my-3 border bg-dark text-white">
+            <div class="row p-3 ">
+                <div class="col-sm-3">Service</div>
+                <div class="col-sm-3">Calendar</div>
+                <div class="col-sm-3">Payment</div>
+                <div class="col-sm-3">Where to find us</div>
+            </div>
+        </div> 
+    </div>
+
+
+    <!-- When you have messages to tell, remember that center align is not always the best choice -->
+    <div class="container-md p-3 my-3 border bg-light">
+        <h2>Who we are?</h3>
+        <p>The University of Ottawa Gentlemen's Room Barber Shop is a one-of-a-kind grooming experience for the modern man. Located in the heart of the university campus, we offer a range of services to help you look and feel your best 24 hours, 7 days a week! From haircuts and shaves to grooming products and accessories, we have everything you need to elevate your style.
+
+            Our barbers are highly skilled and have a passion for men's grooming. We use only the finest products and tools to ensure a top-notch experience for every client. Whether you're looking for a classic, sophisticated look or something more modern and edgy, we can create a custom style that fits your personality and lifestyle.
+            
+            Step into our luxurious, vintage-inspired barber shop and experience the best in men's grooming. Treat yourself to a day of pampering and leave feeling refreshed, confident, and ready to take on the world.</mark></p>
+    </div>
+
+
+    <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
+    <!-- Might be (or not) useful to show some information to the user -->
+    <div class="container  p-3 my-3 border bg-light">
+        <h2>Service description</h2>
+        <p>Here is a list of services offered</p>            
+        <table class="table table-curved">
+            <thead>
+            <tr>
+                <th>Service</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Haircut</td>
+                <td>A traditional barbering service that includes a thorough consultation, shampoo, cut, and style to achieve a customized look that fits your face shape, hair type, and lifestyle.</td>
+                <td>$20.00</td>
+            </tr>
+            <tr>
+                <td>Shave</td>
+                <td>A classic grooming experience that includes a hot towel treatment, pre-shave oil, lather, and a straight-razor shave to achieve a close, smooth, and refreshed look.</td>
+                <td>$5.00</td>
+            </tr>
+            <tr>
+                <td>Beard Trim</td>
+                <td>A specialized grooming service that includes a beard and mustache trim, shaping, and styling to help you maintain a well-groomed and stylish facial hair look.</td>
+                <td>$10.00</td>
+            </tr>
+            <tr>
+                <td>Facial </td>
+                <td>A luxurious grooming experience that includes a deep-cleansing, exfoliating, and moisturizing treatment to refresh and rejuvenate your skin, leaving you feeling revitalized and refreshed.</td>
+                <td>$25.00</td>
+            </tr>
+            <tr>
+                <td>Hair Design</td>
+                <td>A creative barbering service that includes a personalized consultation, cutting, and styling techniques to achieve a unique, edgy, or artistic look that showcases your personality and style.</td>
+                <td>$30.00</td>
+            </tr>
+            <tr>
+                <td>Scalp Treatment</td>
+                <td>A therapeutic grooming experience that includes a deep-cleansing, exfoliating, and moisturizing treatment to revitalize and nourish your scalp and hair, promoting healthy growth and preventing hair loss.</td>
+                <td>$15.00</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Presenting the staff with cards: https://www.w3schools.com/bootstrap4/bootstrap_cards.asp -->
+    <!-- Card columns allows multiple cards next to each other -->
+    <!-- The first card's button doesn't go anywhere, it could be a modal --> 
+    <!-- My second card limits the information seen and uses collapsible to show more -->
+    <div class="container p-3">
+        <h2>Meet our hairdressers</h2>
+        <div class="card-columns">
+            <div class="card bg-primary" style="width:90%">
+                <img class="card-img-top" src="images/Jule.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Jules</h4>
+                    <p class="card-text">Jules has been cutting hair for 10 years.</p>
+                    
+                    <!-- collapsible part -->
+                    <a href="#profile" class="btn btn-danger" data-toggle="collapse">See All Profiles</a>
+                    <div id="profile" class="collapse p-3">
+                        <p>As a professional barber, I have dedicated my career to providing the highest level of grooming services to my clients. With over a decade of experience, I have honed my skills and developed a deep passion for the art of barbering. I believe that a great haircut is more than just a style – it's a reflection of who you are and how you want to present yourself to the world.
+
+                            I take the time to listen to each client's needs and preferences, and use my expertise to create a personalized look that fits their face shape, hair type, and lifestyle. Whether you're looking for a classic, sophisticated look or something more modern and edgy, I can help you achieve the style you want.
+                            
+                            I use only the finest products and tools to ensure a top-notch experience for every client. My barbershop is a sanctuary where you can relax, unwind, and be pampered. I believe that taking care of your appearance is an investment in yourself, and I am committed to providing the best grooming services to help you look and feel your best. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-danger" style="width:90%">
+                <img class="card-img-top" src="images/Jule.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Chris</h4>
+                    <p class="card-text">Chris has been cutting hair for 20 years</p>
+
+                    <!-- collapsible part -->
+                    <a href="#profile" class="btn btn-primary" data-toggle="collapse">See All Profiles</a>
+                    <div id="profile" class="collapse p-3">
+                        <p>As a barber with over 20 years of experience, I have a deep passion for men's grooming. I believe that every client deserves a personalized and attentive experience, and I take the time to understand their individual needs and preferences. I specialize in traditional barbering services, such as haircuts, shaves, and beard trims, and use only the finest products and tools to ensure a top-notch result.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-danger" style="width:90%">
+                <img class="card-img-top" src="images/Jule.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Bryan</h4>
+                    <p class="card-text">Bryan has been cutting hair for 7 years.</p>
+                    
+                    <!-- collapsible part -->
+                    <a href="#profile" class="btn btn-primary" data-toggle="collapse">See All Profiles</a>
+                    <div id="profile" class="collapse p-3">
+                        <p>With a background in cosmetology and barbering, I bring a unique perspective to the grooming industry. I am dedicated to creating custom looks for each of my clients, and I take pride in delivering a truly memorable and relaxing experience. I specialize in hair design and coloring, and use the latest techniques and products to help clients achieve the style they want.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-primary" style="width:90%">
+                <img class="card-img-top" src="images/Jule.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Mattheus</h4>
+                    <p class="card-text">Mattheus has been cutting hair for 9 years.</p>
+                    
+                    <!-- collapsible part -->
+                    <a href="#profile" class="btn btn-danger" data-toggle="collapse">See All Profiles</a>
+                    <div id="profile" class="collapse p-3">
+                        <p>As a barber with a passion for men's grooming, I believe that a great haircut is more than just a style – it's a reflection of who you are and how you want to present yourself to the world. With years of experience and a commitment to continued education, I offer a range of barbering services, including haircuts, shaves, beard trims, and more. I use only the highest quality products and tools to ensure a top-notch result for each and every client.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-primary" style="width:90%">
+                <img class="card-img-top" src="images/Jule.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Mike</h4>
+                    <p class="card-text">Mike has been cutting hair for 35 years.</p>
+                    
+                    <!-- collapsible part -->
+                    <a href="#profile" class="btn btn-danger" data-toggle="collapse">See All Profiles</a>
+                    <div id="profile" class="collapse p-3">
+                        <p>With a focus on traditional barbering techniques, I bring a classic and sophisticated approach to men's grooming. I believe that every client deserves a personalized experience, and I take the time to understand their individual needs and preferences. From haircuts and shaves to grooming products and accessories, I have everything you need to elevate your style. Whether you're looking for a classic look or something more modern and edgy, I can help you achieve the style you want.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="text-center"></div>
+        <div class="container p-3 my-3 border bg-light">
+            <h2>Our haircut gallery</h2>
+            <div class="row justify-content-md-center">
+                <div class="col-">
+                    <img src="images/haircut1.jpg" alt="haircut1">
+                </div>
+                <div class="col-">
+                    <img src="images/haircut2.jpg" alt="haircut2">
+                </div>
+                <div class="col-">
+                    <img src="images/haircut3.jpg" alt="haircut3">
+                </div>
+                <div class="col-">
+                    <img src="images/haircut4.jpg" alt="haircut4">
+                </div>
+                <div class="col-">
+                    <img src="images/haircut5.jpg"  alt="haircut5">
+                </div>
+                <div class="col-">
+                    <img src="images/haircut6.jpg" alt="haircut6">
+            </div>
+        </div>
+
+            </div>
+    <div class="container p-3">
+        <h2>Book an appointment:</h2>
+        <form>
+            <div class="form-group">
+                <label for="email">Name:</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+                <label for="date">Date of Appointment:</label>
+                <input type="date" class="form-control" id="date">
+            </div>
+            <div class="form-group">
+                <label for="time">Preferred Time:</label>
+                <input type="time" class="form-control" id="time">
+            </div>
+            <div class="form-group">
+                <label for="appointmentType">Appointment For:</label>
+                <select id="appointmentType" name="appointmentType">
+                <option value="empty"></option>
+                <option value="haircut">Haircut $20.00</option>
+                <option value="shave">Shave $5.00</option>
+                <option value="beardTrim">Beard Trim $10.00</option>
+                <option value="facial">Facial $25.00</option>
+                <option value="hairDesign">Hair Design $30.00</option>
+                <option value="scalpTreatment">Scalp Treatment $15.00</option>
+                </select>
+            </div>
+        <button type="submit" class="btn btn-primary" onclick="popup()">Submit</button>
+        </form>
+    </div>
+
+    <div class="text-center">
+        <h2>Directions</h2>
+        <p> Starting at the intersection of Rideau Street and Sussex Drive,<br>
+            Head west on Rideau Street.<br>
+            Continue straight for about 2 kilometers.<br>
+            Turn left onto King Edward Avenue.<br>
+            Continue straight for about 1 kilometer.<br>
+            Turn right onto Louis Pasteur Private.<br>
+            Continue straight for about 200 meters.<br>
+            The University of Ottawa main campus will be on your left.<br>
+            Parking is available in the main visitor lot, located on University Drive!</p>
+
+        <img src="images/map.png" class="img-fluid" alt="" width = 60% > 
+    </div>
+</body>
+</html>
