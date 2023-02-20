@@ -259,15 +259,26 @@
                 <input type="time" class="form-control" id="time">
             </div>
             <div class="form-group">
-                <label for="appointmentType">Appointment For:</label>
-                <select id="appointmentType" name="appointmentType">
-                <option value="empty"></option>
-                <option value="haircut">Haircut $20.00</option>
-                <option value="shave">Shave $5.00</option>
-                <option value="beardTrim">Beard Trim $10.00</option>
-                <option value="facial">Facial $25.00</option>
-                <option value="hairDesign">Hair Design $30.00</option>
-                <option value="scalpTreatment">Scalp Treatment $15.00</option>
+                <label for="appointmentType">Requested Service:</label><br>
+                <select id="appointmentType" name="appointmentType" style="width:100%; height: calc(1.5em + .75rem + 2px);border: 1px solid #ced4da;border-radius: .25rem;">
+                    <option value="empty"></option>
+                    <option value="haircut">Haircut $20.00</option>
+                    <option value="shave">Shave $5.00</option>
+                    <option value="beardTrim">Beard Trim $10.00</option>
+                    <option value="facial">Facial $25.00</option>
+                    <option value="hairDesign">Hair Design $30.00</option>
+                    <option value="scalpTreatment">Scalp Treatment $15.00</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="employee">Requested Employee:</label><br>
+                <select id="employee" name="employee" style="width:100%; height: calc(1.5em + .75rem + 2px);border: 1px solid #ced4da;border-radius: .25rem;">
+                    <option value="empty"></option>
+                    <option value="staff1">Jules</option>
+                    <option value="staff2">Bryan</option>
+                    <option value="staff3">Mike</option>
+                    <option value="staff4">Chris</option>
+                    <option value="staff5">Mattheus</option>
                 </select>
             </div>
         <button type="submit" class="btn btn-primary" onclick="popup()">Submit</button>
