@@ -43,22 +43,38 @@
         
     </div>
 
-    <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
-    <!-- It can be useful for placement of information -->
-    <div class="text-center">
-        <div class="container-md p-3 my-3 border bg-dark text-white">
-            <div class="row p-3 ">
-                <div class="col-sm-3">Service</div>
-                <div class="col-sm-3">Calendar</div>
-                <div class="col-sm-3">Payment</div>
-                <div class="col-sm-3">Where to find us</div>
-            </div>
-        </div> 
-    </div>
+    <div class="container-md p-3 my-3 border bg-dark text-white">
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <ul class="text-center navbar-nav" >
+                <li class="nav-item">
+                    <a class="nav-link" href="#first"><img src="images/logo.png" alt="logo" style="width:70px;"><br>About Us</a>
+                </li> 
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#second"><img src="images/logo.png" alt="logo" style="width:70px;"><br>Services</a>
+                </li> 
 
+                <li class="nav-item">
+                    <a class="nav-link" href="#third"><img src="images/logo.png" alt="logo" style="width:70px;"><br>Staff</a>
+                </li> 
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#fourth"><img src="images/logo.png" alt="logo" style="width:70px;"><br>Gallery</a>
+                </li> 
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#fifth"><img src="images/logo.png" alt="logo" style="width:70px;"><br>Book</a>
+                </li> 
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#sixth"><img src="images/logo.png" alt="logo" style="width:70px;"><br>Location</a>
+                </li> 
+            </ul>
+        </nav>
+    </div> 
 
     <!-- When you have messages to tell, remember that center align is not always the best choice -->
-    <div class="container-md p-3 my-3 border bg-light">
+    <div class="container-md p-3 my-3 border bg-light" id="first">
         <h2>Who we are?</h3>
         <p>The University of Ottawa Gentlemen's Room Barber Shop is a one-of-a-kind grooming experience for the modern man. Located in the heart of the university campus, we offer a range of services to help you look and feel your best 24 hours, 7 days a week! From haircuts and shaves to grooming products and accessories, we have everything you need to elevate your style.
 
@@ -70,7 +86,7 @@
 
     <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
     <!-- Might be (or not) useful to show some information to the user -->
-    <div class="container  p-3 my-3 border bg-light">
+    <div class="container  p-3 my-3 border bg-light" id="second">
         <h2>Service description</h2>
         <p>Here is a list of services offered</p>            
         <table class="table table-curved">
@@ -120,7 +136,7 @@
     <!-- Card columns allows multiple cards next to each other -->
     <!-- The first card's button doesn't go anywhere, it could be a modal --> 
     <!-- My second card limits the information seen and uses collapsible to show more -->
-    <div class="container p-3">
+    <div class="container p-3" id="third">
         <h2>Meet our hairdressers</h2>
         <div class="card-columns">
             <div class="card bg-primary" style="width:90%">
@@ -195,8 +211,8 @@
         </div>
     </div>
     
-    <div class="text-center"></div>
-        <div class="container p-3 my-3 border bg-light">
+    <div class="text-center" id="fourth"></div>
+        <div class="container p-3 my-3 border bg-light" >
             <h2>Our haircut gallery</h2>
             <div class="row justify-content-md-center">
                 <div class="col-">
@@ -220,7 +236,7 @@
         </div>
 
             </div>
-    <div class="container p-3">
+    <div class="container p-3" id="fifth">
         <h2>Book an appointment:</h2>
         <form>
             <div class="form-group">
@@ -255,7 +271,7 @@
         </form>
     </div>
 
-    <div class="text-center">
+    <div class="text-center" id="sixth">
         <h2>Directions</h2>
         <p> Starting at the intersection of Rideau Street and Sussex Drive,<br>
             Head west on Rideau Street.<br>
