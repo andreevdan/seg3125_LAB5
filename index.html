@@ -237,8 +237,8 @@
                     <img src="images/haircut6.jpg" alt="haircut6">
             </div>
         </div>
+    </div>
 
-            </div>
     <div class="container p-3" id="fifth">
         <h2>Book an appointment:</h2>
         <form method="post" id="paymentForm" >
@@ -283,17 +283,19 @@
             </div>
         
         <h2>Payment:</h2>
-            <div >
-                <label for="txtcard">Card Number:</label>
-                <input type="text" id="txtcard" onkeypress="return formatCardNumber(event)" />
+        <form method="post" id="payForm" ></form>
+            <div  class="form-group">
+                <label for="txtcard">Card Number (Visa, MasterCard, AMEX or Discover):</label>
+                <input type="text" id="txtcard" onkeypress="return formatCardNumber(event)" style="width:100%; height: calc(1.5em + .75rem + 2px);border: 1px solid #ced4da;border-radius: .25rem;"/>
             </div>
             <div class="form-group">
                 <label for="cvv">CVV:</label>
-                <input id="cvv" type="text" name="cvv" placeholder="123" style="width: 40px" onkeypress="return isNumberKey(event)" maxlength="4">
+                <input id="cvv" type="text" name="cvv" placeholder="123" style="width:100%; height: calc(1.5em + .75rem + 2px);border: 1px solid #ced4da;border-radius: .25rem;" onkeypress="return isNumberKey(event)" maxlength="4">
             </div>
             <div class="form-group">
                 <label for="expire">Expiry Date:</label>
-                <select name='expire' id='expiry_month'>
+                <br>
+                <select name='expire' id='expiry_month' style="width:49.8%; height: calc(1.5em + .75rem + 2px);border: 1px solid #ced4da;border-radius: .25rem;">
                     <option value=''>Month</option>
                     <option value='01'>January</option>
                     <option value='02'>February</option>
@@ -308,7 +310,7 @@
                     <option value='11'>November</option>
                     <option value='12'>December</option>
                 </select> 
-                <select name='expire' id='expiry_year'>
+                <select name='expire' id='expiry_year' style="width:49.8%; height: calc(1.5em + .75rem + 2px);border: 1px solid #ced4da;border-radius: .25rem;">
                     <option value=''>Year</option>
                     <option value='20'>2023</option>
                     <option value='21'>2024</option>
@@ -330,13 +332,6 @@
             <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </form>
-    </div>
-        <label for="cardNumber">Credit Card Number:</label>
-	    <input type="text" id="cardNumber" name="cardNumber">
-	    <button onclick="validate()">Validate</button>
-	    <p id="result"></p>
-    <div>
-
     </div>
 
     <div class="text-center" id="sixth">
