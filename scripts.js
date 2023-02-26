@@ -26,20 +26,19 @@ const form = document.getElementById('payForm');
 form.addEventListener('submit', function(event) {
   const cardNumber = document.getElementById('txtcard').value;
   const cvv = document.getElementById('cvv').value;
+  const month = document.getElementById('expiry_month').value;
+  const year = document.getElementById('expiry_year').value;
   if (!validateCardNumber(cardNumber)) {
     event.preventDefault(); // prevent form submission if card number is invalid
     alert('Please enter a valid 16-digit card number.');
   } else if (cvv.length < 3 || cvv.length > 4) {
     event.preventDefault(); // prevent form submission if CVV is invalid
     alert('Please enter a valid 3-4 digit CVV.');
-  } else {
-
-    if (formatCardNumber(event) && validateServices(serviceID) && validateName(nameID) && isNumberKey(evt)){
-      alert('Your appointment has been made!');
-    }else{
-      alert('ops something went wrong please double  heck you have filled all the information!');
-    }
+  } else if (year == "Year" || month == "Month"){
+    alert('Please enter valid month and Year!');
     
+  }else{
+    alert('Your appointment has been made!');
   }
 });
 
