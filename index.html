@@ -243,23 +243,23 @@
         <form method="post" id="paymentForm" >
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" class="form-control" id="name" oninput="validateName('name')">
+                <input type="text" class="form-control" id="name" oninput="validateName('name')" name="dff[]" placeholder="Name" required>
             </div>
             <div class="form-group">
                 <label for="email">Email address:</label>
-                <input type="email" class="form-control" id="email">
+                <input type="email" class="form-control" id="email" name="dff[]" placeholder="example@gmail.com" required>
             </div>
             <div class="form-group">
                 <label for="date">Date of Appointment (Closed on Weekends):</label>
-                <input type="date" class="form-control" id="date" oninput="formatDate('date')">
+                <input type="date" class="form-control" id="date" oninput="formatDate('date')" name="dff[]"required>
             </div>
             <div class="form-group">
                 <label for="time">Preferred Time:</label>
-                <input type="time" class="form-control" id="time" min="08:00" max="17:00">
+                <input type="time" class="form-control" id="time" min="08:00" max="17:00" name="dff[]" required>
             </div>
             <div class="form-group">
                 <label for="appointmentType">Requested Service:</label><br>
-                <select id="appointmentType" name="appointmentType" oninput="validateServices('appointmentType')" style="width:100%; height: calc(1.5em + .75rem + 2px);border: 1px solid #ced4da;border-radius: .25rem;">
+                <select id="appointmentType" name="appointmentType" oninput="validateServices('appointmentType')" style="width:100%; height: calc(1.5em + .75rem + 2px);border: 1px solid #ced4da;border-radius: .25rem;" required>
                     <option value="empty"></option>
                     <option value="haircut">Haircut $20.00</option>
                     <option value="shave">Shave $5.00</option>
@@ -271,7 +271,7 @@
             </div>
             <div class="form-group">
                 <label for="employee">Requested Employee:</label><br>
-                <select id="employee" name="employee" style="width:100%; height: calc(1.5em + .75rem + 2px);border: 1px solid #ced4da;border-radius: .25rem;">
+                <select id="employee" name="employee" style="width:100%; height: calc(1.5em + .75rem + 2px);border: 1px solid #ced4da;border-radius: .25rem;" required>
                     <option value="empty"></option>
                     <option value="staff1">Jules (Available: Mondays, Wednesdays)</option>
                     <option value="staff2">Bryan (Available: Tuesdays, Thursdays)</option>
@@ -328,7 +328,7 @@
                     <option value='24'>2037</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" id="check">Submit</button>
             </div>
         </form>
     </div>

@@ -33,9 +33,34 @@ form.addEventListener('submit', function(event) {
     event.preventDefault(); // prevent form submission if CVV is invalid
     alert('Please enter a valid 3-4 digit CVV.');
   } else {
-    alert('Your appointment has been made!');
+
+    if (formatCardNumber(event) && validateServices(serviceID) && validateName(nameID) && isNumberKey(evt)){
+      alert('Your appointment has been made!');
+    }else{
+      alert('ops something went wrong please double  heck you have filled all the information!');
+    }
+    
   }
 });
+
+document.getElementById("check").onclick = function() {
+  let allAreFilled = true;
+  document.getElementById("form-group").querySelectorAll("[required]").forEach(function(i) {
+    if (!allAreFilled) return;
+    if (i.type === "radio") {
+      let radioValueCheck = false;
+document.getElementById("form-group").querySelectorAll(`[name=${i.name}]`).forEach(function(r) {
+        if (r.checked) radioValueCheck = true;
+      })
+      allAreFilled = radioValueCheck;
+      return;
+    }
+    if (!i.value) { allAreFilled = false;  return; }
+  })
+  if (!allAreFilled) {
+    alert('Fill all the fields');
+  }
+};
   //
 
 function formatCardNumber(event) {
