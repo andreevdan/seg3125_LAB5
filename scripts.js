@@ -70,3 +70,30 @@ function validateCardNumber(cardNumber) {
     }
     return true;
 }
+
+
+
+function validate() {
+  var cardNumber = document.getElementById("cardNumber").value;
+  var visaRegex = /^4[0-9]{12}(?:[0-9]{3})?$/;
+  var mastercardRegex = /^5[1-5][0-9]{14}$/;
+  var amexRegex = /^3[47][0-9]{13}$/;
+  var discoverRegex = /^6(?:011|5[0-9]{2})[0-9]{12}$/;
+  var valid = false;
+
+  if (visaRegex.test(cardNumber)) {
+    valid = true;
+  } else if (mastercardRegex.test(cardNumber)) {
+    valid = true;
+  } else if (amexRegex.test(cardNumber)) {
+    valid = true;
+  } else if (discoverRegex.test(cardNumber)) {
+    valid = true;
+  }
+
+  if (valid) {
+    document.getElementById("result").innerHTML = "Valid credit card number";
+  } else {
+    document.getElementById("result").innerHTML = "Invalid credit card number";
+  }
+}
