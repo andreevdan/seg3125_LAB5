@@ -34,7 +34,7 @@ form.addEventListener('submit', function(event) {
   } else if (cvv.length < 3 || cvv.length > 4) {
     event.preventDefault(); // prevent form submission if CVV is invalid
     alert('Please enter a valid 3-4 digit CVV.');
-  } else if (year != "Year" || month != "Month"){
+  } else if (year == "Year" || month == "Month"){
     alert('Please enter valid month and Year!');
   }else{
     alert('Your appointment has been made!');
