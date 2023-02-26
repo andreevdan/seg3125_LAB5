@@ -244,19 +244,19 @@
         <form method="post" id="paymentForm" >
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" class="form-control" id="name">
+                <input type="text" class="form-control" id="name" oninput="validateName('name')">
             </div>
             <div class="form-group">
                 <label for="email">Email address:</label>
                 <input type="email" class="form-control" id="email">
             </div>
             <div class="form-group">
-                <label for="date">Date of Appointment:</label>
-                <input type="date" class="form-control" id="date">
+                <label for="date">Date of Appointment (Closed on Weekends):</label>
+                <input type="date" class="form-control" id="date" oninput="formatDate('date')">
             </div>
             <div class="form-group">
                 <label for="time">Preferred Time:</label>
-                <input type="time" class="form-control" id="time">
+                <input type="time" class="form-control" id="time" min="08:00" max="17:00">
             </div>
             <div class="form-group">
                 <label for="appointmentType">Requested Service:</label><br>
@@ -274,11 +274,11 @@
                 <label for="employee">Requested Employee:</label><br>
                 <select id="employee" name="employee" style="width:100%; height: calc(1.5em + .75rem + 2px);border: 1px solid #ced4da;border-radius: .25rem;">
                     <option value="empty"></option>
-                    <option value="staff1">Jules</option>
-                    <option value="staff2">Bryan</option>
-                    <option value="staff3">Mike</option>
-                    <option value="staff4">Chris</option>
-                    <option value="staff5">Mattheus</option>
+                    <option value="staff1">Jules (Available: Mondays, Wednesdays)</option>
+                    <option value="staff2">Bryan (Available: Tuesdays, Thursdays)</option>
+                    <option value="staff3">Mike (Available: Wednesdays, Fridays)</option>
+                    <option value="staff4">Chris (Available: Thursdays, Fridays)</option>
+                    <option value="staff5">Mattheus (Available: Mondays, Fridays)</option>
                 </select>
             </div>
         

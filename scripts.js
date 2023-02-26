@@ -97,3 +97,32 @@ function validate() {
     document.getElementById("result").innerHTML = "Invalid credit card number";
   }
 }
+
+//Validate the name field
+function validateName(nameID){
+  const nameInput = document.getElementById(nameID);
+  const regex = /^[a-zA-Z]+$/;
+  const name = nameInput.value;
+  if (!regex.test(name)){
+    nameInput.setCustomValidity('Please enter a valid name.');
+  }else {
+    nameInput.setCustomValidity('');
+  }
+}
+
+//Validate the date field
+function formatDate(dateID){
+  const dateInput = document.getElementById(dateID);
+  const selectedDate = new Date(dateInput.value);
+  const schedules = {staff1: [0, 2], staff2: [1, 3], staff3: [2, 4], staff4: [3, 4], staff5: [0, 4],};
+  const employeeDropdown = document.getElementById("employee");
+  const employee = employeeDropdown.value;
+
+  if (selectedDate.getDay() === 5 || selectedDate.getDay() === 6) { //Closed on Saturdays and Sundays
+    dateInput.setCustomValidity('Sorry we are closed on this day. Please select another day');
+  } else if (schedules[employee] && !schedules[employee].includes(selectedDate.getDay())) { // Tells user that employee is not avaiable on certain days
+    dateInput.setCustomValidity('This employee is not working on this day. Please select another day');
+  } else {
+    dateInput.setCustomValidity('');
+  }
+}
