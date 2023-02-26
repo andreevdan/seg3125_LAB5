@@ -102,10 +102,12 @@ function validate() {
 function validateName(nameID){
   const nameInput = document.getElementById(nameID);
   const regex = /^[a-zA-Z]+$/;
-  const name = nameInput.value;
-  if (!regex.test(name)){
+  const name = nameInput.value.trim();
+  if(!name){
     nameInput.setCustomValidity('Please enter a valid name.');
-  }else {
+  }else if(!regex.test(name)){
+    nameInput.setCustomValidity('Please enter a valid name.');
+  }else{
     nameInput.setCustomValidity('');
   }
 }
@@ -119,10 +121,21 @@ function formatDate(dateID){
   const employee = employeeDropdown.value;
 
   if (selectedDate.getDay() === 5 || selectedDate.getDay() === 6) { //Closed on Saturdays and Sundays
-    dateInput.setCustomValidity('Sorry we are closed on this day. Please select another day');
+    dateInput.setCustomValidity('Sorry we are closed on this day. Please select another date');
   } else if (schedules[employee] && !schedules[employee].includes(selectedDate.getDay())) { // Tells user that employee is not avaiable on certain days
-    dateInput.setCustomValidity('This employee is not working on this day. Please select another day');
+    dateInput.setCustomValidity('This employee is not working on this day. Please select another date');
   } else {
     dateInput.setCustomValidity('');
+  }
+}
+
+function validateServices(serviceID){
+  const serviceInput = document.getElementById(serviceID);
+  const service = serviceInput.value
+
+  if (service === "empty"){
+    serviceInput.setCustomValidity("Please select a service.");
+  } else {
+    serviceInput.setCustomValidity("");
   }
 }
