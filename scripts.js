@@ -142,3 +142,13 @@ function validateServices(serviceID){
     serviceInput.setCustomValidity("");
   }
 }
+
+
+const emailInput = document.getElementById('email');
+const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+emailInput.addEventListener('blur', () => {
+  if (!emailRegex.test(emailInput.value)) {
+    alert('Enter a valid email');
+    emailInput.value = ('');
+  }
+});
