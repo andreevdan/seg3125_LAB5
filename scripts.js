@@ -23,6 +23,7 @@ cvvInput.addEventListener('keydown', function(event) {
 });
   
 const form = document.getElementById('payForm');
+var appointmentFieldsFilled = false;
 form.addEventListener('submit', function(event) {
   const cardNumber = document.getElementById('txtcard').value;
   const cvv = document.getElementById('cvv').value;
@@ -35,9 +36,13 @@ form.addEventListener('submit', function(event) {
     event.preventDefault(); // prevent form submission if CVV is invalid
     alert('Please enter a valid 3-4 digit CVV.');
   } else if (year == "Year" || month == "Month"){
+    event.preventDefault(); // prevent form resubmission if expiration is invalid
     alert('Please enter valid month and Year!');
-  }else{
+  } else if (appointmentFieldsFilled == true){
     alert('Your appointment has been made!');
+  }
+  else{
+    event.preventDefault(); // prevent form resubmission
   }
 });
 
@@ -47,7 +52,7 @@ document.getElementById("check").onclick = function() {
     if (!allAreFilled) return;
     if (i.type === "radio") {
       let radioValueCheck = false;
-document.getElementById("paymentForm").querySelectorAll(`[name=${i.name}]`).forEach(function(r) {
+      document.getElementById("paymentForm").querySelectorAll(`[name=${i.name}]`).forEach(function(r) {
         if (r.checked) radioValueCheck = true;
       })
       allAreFilled = radioValueCheck;
@@ -57,9 +62,12 @@ document.getElementById("paymentForm").querySelectorAll(`[name=${i.name}]`).forE
   })
   if (!allAreFilled) {
     alert('Fill all the fields');
+    appointmentFieldsFilled = false;
+  }
+  else if (allAreFilled){
+    appointmentFieldsFilled = true;
   }
 };
-  //
 
 function formatCardNumber(event) {
   const key = event.key;
